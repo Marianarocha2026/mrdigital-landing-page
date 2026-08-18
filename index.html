@@ -174,8 +174,12 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,11,0.78), rgba(10,10,11,0.92));
+    background: linear-gradient(180deg, rgba(10,10,11,0.55), rgba(10,10,11,0.72));
     z-index: 1;
+  }
+
+  .hero h1, .hero p, .hero .hero-note {
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
   }
 
   .hero .container { position: relative; z-index: 2; }
@@ -284,10 +288,13 @@
 
   /* ===== METRICS ===== */
   .metrics {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
     background: var(--bg-soft);
   }
+
+  /* Faixa de transição suave (esfumado) entre blocos de cor diferente. */
+  .fade-divider { height: 90px; }
+  .fade-divider.to-light { background: linear-gradient(to bottom, #111113, #fafafa); }
+  .fade-divider.to-dark { background: linear-gradient(to bottom, #fafafa, #111113); }
 
   .metrics-grid {
     display: grid;
@@ -361,7 +368,6 @@
   }
 
   .section-light .card,
-  .section-light .testimonial,
   .section-light .faq-item {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 20px rgba(0, 0, 0, 0.05);
   }
@@ -622,7 +628,7 @@
   }
 
   /* ===== PROCESS ===== */
-  .process { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .process { background: var(--bg-soft); }
 
   .steps {
     display: grid;
@@ -658,20 +664,27 @@
   }
 
   .testimonial {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: #161618;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
-    padding: 28px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28), 0 4px 14px rgba(0, 0, 0, 0.14);
   }
+
+  .testimonial .author .name { color: #f4f4f5; }
+  .testimonial .author .role { color: #a1a1aa; }
 
   .testimonial-img {
     width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    object-position: top;
     display: block;
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   /* Slot para print do depoimento real (WhatsApp). */
@@ -737,7 +750,7 @@
   .author .role { font-size: 12.5px; color: var(--text-dim); }
 
   /* ===== ABOUT / ESPECIALISTA ===== */
-  .about { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .about { background: var(--bg-soft); }
 
   .about-wrap {
     display: grid;
@@ -1230,6 +1243,8 @@
   </div>
 </div>
 
+<div class="fade-divider to-light"></div>
+
 <!-- ===== METODOLOGIA ===== -->
 <section id="solucao" class="section-light">
   <div class="container">
@@ -1310,6 +1325,8 @@
   </div>
 </section>
 
+<div class="fade-divider to-dark"></div>
+
 <!-- ===== PROCESS ===== -->
 <section class="process" id="como-funciona">
   <div class="container">
@@ -1337,6 +1354,8 @@
     </div>
   </div>
 </section>
+
+<div class="fade-divider to-light"></div>
 
 <!-- ===== TESTIMONIALS ===== -->
 <section id="resultados" class="section-light">
@@ -1376,6 +1395,8 @@
     </div>
   </div>
 </section>
+
+<div class="fade-divider to-dark"></div>
 
 <!-- ===== ABOUT / ESPECIALISTA ===== -->
 <section class="about" id="especialista">
