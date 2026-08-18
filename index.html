@@ -164,11 +164,26 @@
     padding: calc(80px + var(--bar-h)) 0 100px;
     position: relative;
     text-align: center;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
   }
+
+  /* Camada escura sobre a foto de fundo, pra manter o texto branco legível independente da imagem. */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,11,0.78), rgba(10,10,11,0.92));
+    z-index: 1;
+  }
+
+  .hero .container { position: relative; z-index: 2; }
 
   .hero::before {
     content: '';
     position: absolute;
+    z-index: 1;
     top: -200px; left: 50%;
     transform: translateX(-50%);
     width: 800px; height: 600px;
@@ -1332,13 +1347,31 @@
     </div>
     <div class="testimonials-grid">
       <div class="testimonial reveal">
-        <img class="testimonial-img" src="depoimento-camila.png" alt="Depoimento de Camila R., Agência Viagens">
+        <img class="testimonial-img" src="depoimento-camila.png" alt="Depoimento de Camila R., Agência de Viagens em Pernambuco">
+        <div class="author">
+          <div>
+            <div class="name">Camila R.</div>
+            <div class="role">Agência de Viagens em Pernambuco</div>
+          </div>
+        </div>
       </div>
       <div class="testimonial reveal">
-        <img class="testimonial-img" src="depoimento-juliana.png" alt="Depoimento de Juliana Reis">
+        <img class="testimonial-img" src="depoimento-juliana.png" alt="Depoimento de Juliana Reis, Consultora de Viagens em Belo Horizonte">
+        <div class="author">
+          <div>
+            <div class="name">Juliana Reis</div>
+            <div class="role">Consultora de Viagens em Belo Horizonte</div>
+          </div>
+        </div>
       </div>
       <div class="testimonial reveal">
-        <img class="testimonial-img" src="depoimento-renata.png" alt="Depoimento de Renata Martins">
+        <img class="testimonial-img" src="depoimento-renata.png" alt="Depoimento de Renata Martins, Agente de viagens para público de luxo">
+        <div class="author">
+          <div>
+            <div class="name">Renata Martins</div>
+            <div class="role">Agente de viagens para público de luxo</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
