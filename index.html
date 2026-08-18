@@ -1227,23 +1227,6 @@
   </div>
 </header>
 
-<!-- ===== VSL ===== -->
-<section class="vsl" id="vsl">
-  <div class="container">
-    <div class="vsl-wrap reveal">
-      <!-- SUBSTITUIR: salve o arquivo do seu vídeo com o nome "vsl.mp4" nesta mesma pasta onde está este HTML. O vídeo aparece aqui automaticamente, sem precisar de YouTube, Vimeo ou qualquer outra plataforma. -->
-      <video class="vsl-video" controls playsinline preload="metadata">
-        <source src="vsl.mp4" type="video/mp4">
-        Seu navegador não suporta a exibição de vídeo.
-      </video>
-      <div class="vsl-timer">
-        <span>⚠ Sua Análise Gratuita se encerra em:</span>
-        <span class="value" id="vsl-timer">20:00</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== METRICS ===== -->
 <div class="metrics" id="metrics">
   <div class="container metrics-grid">
@@ -1603,12 +1586,10 @@
   });
 
   // Cronômetro de urgência: conta 20 minutos e reinicia em loop silenciosamente.
-  // Os dois cronômetros da página (topo e abaixo da VSL) ficam sincronizados.
   const URGENCY_SECONDS = 20 * 60;
   let urgencyRemaining = URGENCY_SECONDS;
   const urgencyTimerEls = [
-    document.getElementById('urgency-timer'),
-    document.getElementById('vsl-timer')
+    document.getElementById('urgency-timer')
   ].filter(Boolean);
 
   function tickUrgency() {
