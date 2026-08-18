@@ -266,48 +266,6 @@
     font-weight: 700;
   }
 
-  /* ===== VSL ===== */
-  .vsl { padding: 0 0 100px; }
-
-  .vsl-wrap { max-width: 860px; margin: 0 auto; }
-
-  .vsl-video {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    background: #000;
-  }
-
-  .vsl-timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    text-align: center;
-    margin-top: 24px;
-    padding: 12px 20px;
-    border-radius: 10px;
-    background: rgba(220, 38, 38, 0.1);
-    border: 1px solid rgba(220, 38, 38, 0.3);
-    color: #f87171;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .vsl-timer .value {
-    font-variant-numeric: tabular-nums;
-    font-weight: 800;
-    background: rgba(220, 38, 38, 0.18);
-    padding: 3px 11px;
-    border-radius: 6px;
-  }
-
-  @media (max-width: 880px) {
-    .vsl { padding: 0 0 72px; }
-  }
 
   /* ===== METRICS ===== */
   .metrics {
@@ -899,18 +857,29 @@
 
   .booking-info h2 { margin-bottom: 20px; }
 
-  .urgency-note {
+  .note-timer {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     gap: 8px;
     margin-top: 28px;
-    padding: 10px 16px;
+    padding: 14px 20px;
     border-radius: 10px;
     background: rgba(220, 38, 38, 0.1);
     border: 1px solid rgba(220, 38, 38, 0.3);
     color: #f87171;
     font-size: 13px;
     font-weight: 600;
+    text-align: center;
+  }
+
+  .note-timer .value {
+    font-variant-numeric: tabular-nums;
+    font-weight: 800;
+    font-size: 15px;
+    background: rgba(220, 38, 38, 0.18);
+    padding: 3px 12px;
+    border-radius: 6px;
   }
 
   .check-list {
@@ -1130,8 +1099,6 @@
 
   .final-cta h2 { max-width: 640px; margin: 0 auto 16px; }
   .final-cta .section-sub { margin: 0 auto 20px; }
-
-  .final-cta .urgency-note { margin-bottom: 28px; }
 
   /* ===== FOOTER ===== */
   footer {
@@ -1420,7 +1387,10 @@
           <li><span class="check">✓</span>Plano de ação claro, mesmo que não fechemos negócio</li>
           <li><span class="check">✓</span>Projeção de investimento e retorno esperado</li>
         </ul>
-        <div class="urgency-note">⚠ Vagas de Análise Gratuita limitadas por semana. O cronômetro no topo mostra o tempo restante.</div>
+        <div class="note-timer">
+          <span>⚠ Análise com vagas limitadas</span>
+          <span class="value" id="booking-timer">20:00</span>
+        </div>
       </div>
 
       <div class="form-card reveal">
@@ -1589,7 +1559,8 @@
   const URGENCY_SECONDS = 20 * 60;
   let urgencyRemaining = URGENCY_SECONDS;
   const urgencyTimerEls = [
-    document.getElementById('urgency-timer')
+    document.getElementById('urgency-timer'),
+    document.getElementById('booking-timer')
   ].filter(Boolean);
 
   function tickUrgency() {
