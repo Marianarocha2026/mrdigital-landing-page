@@ -858,11 +858,12 @@
   .booking-info h2 { margin-bottom: 20px; }
 
   .note-timer {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin-top: 28px;
+    width: fit-content;
+    margin: 28px auto 0;
     padding: 14px 20px;
     border-radius: 10px;
     background: rgba(220, 38, 38, 0.1);
@@ -1388,7 +1389,7 @@
           <li><span class="check">✓</span>Projeção de investimento e retorno esperado</li>
         </ul>
         <div class="note-timer">
-          <span>⚠ Análise com vagas limitadas</span>
+          <span>Análise com vagas limitadas</span>
           <span class="value" id="booking-timer">20:00</span>
         </div>
       </div>
