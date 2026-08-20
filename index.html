@@ -347,6 +347,28 @@
   .section-head.center { text-align: center; }
   .section-head.center .section-sub { margin: 0 auto; }
 
+  /* ===== PROSE (blocos de parágrafos corridos, sem grid) ===== */
+  .prose { max-width: 640px; }
+  .prose.center { margin: 0 auto; text-align: left; }
+  .prose p { color: var(--text-soft); font-size: 15.5px; margin-bottom: 16px; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose ul { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; margin: 20px 0; color: var(--text-soft); font-size: 15.5px; }
+  .prose ul li::marker { color: var(--accent); }
+
+  /* ===== CHIPS (exemplos de busca) ===== */
+  .chip-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .search-chip {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-soft);
+  }
+
   /* ===== SEÇÕES CLARAS ===== */
   .section-light {
     --bg: #fafafa;
@@ -1200,12 +1222,10 @@
 <!-- ===== HERO ===== -->
 <header class="hero">
   <div class="container">
-    <!-- EDITE (opcional): headline principal do site -->
-    <h1>Faça sua agência de viagem crescer com <span class="highlight">mais previsibilidade</span></h1>
-    <!-- EDITE (opcional): subheadline. Adapte para o seu posicionamento -->
-    <p>Estratégias de tráfego pago para agências de viagens, atraindo clientes em potencial direto para o WhatsApp.</p>
+    <h1>Tem gente querendo viajar todos os dias. A pergunta é: <span class="highlight">por que elas não estão comprando da sua agência de viagens?</span></h1>
+    <p>Coloco sua agência de viagens na frente de pessoas que já estão procurando destinos, pacotes e experiências para transformar buscas em oportunidades reais de venda.</p>
     <div class="cta-group">
-      <a href="#agendar" class="btn-primary">Quero minha Análise Gratuita →</a>
+      <a href="https://wa.me/5531975387498?text=Ol%C3%A1!%20Quero%20atrair%20mais%20clientes%20para%20minha%20ag%C3%AAncia." class="btn-primary" target="_blank" rel="noopener">Quero atrair mais clientes para minha agência →</a>
     </div>
     <div class="hero-note">
       <span>25+ agências de viagem atendidas</span>
@@ -1237,82 +1257,51 @@
   </div>
 </div>
 
-<!-- ===== METODOLOGIA ===== -->
+<!-- ===== O PROBLEMA ===== -->
 <section id="solucao" class="section-light">
   <div class="container">
     <div class="section-head center reveal">
-      <span class="section-tag">Nossa metodologia</span>
-      <h2>Só existem 3 formas de aumentar o faturamento da sua agência de viagem</h2>
-      <p class="section-sub">Não é sorte, é estrutura: toda agência de viagem que cresce com tráfego pago ativa estas três alavancas.</p>
+      <span class="section-tag">A realidade hoje</span>
+      <h2>Sua agência não precisa depender só de indicação para vender</h2>
     </div>
-
-    <div class="lever-path">
-      <div class="path-step start reveal" style="--c:#3f3f46">
-        <div class="path-node"><div class="path-orb">🚩</div></div>
-        <div class="start-label">Sua agência de viagem hoje</div>
-        <div class="start-sub">Saindo de um faturamento baixo, sem previsão de vendas</div>
-      </div>
-
-      <div class="path-step reveal" style="--c:#22c55e">
-        <div class="path-node"><div class="path-orb">1</div></div>
-        <div class="path-card">
-          <div class="bar"></div>
-          <div class="ptag">Alavanca 01</div>
-          <div class="head"><h3>Mais leads qualificados</h3></div>
-          <p>Atrair viajantes com intenção real de fechar pacote, filtrados antes de chegar no seu WhatsApp.</p>
-        </div>
-      </div>
-
-      <div class="path-step reveal" style="--c:#0d9488">
-        <div class="path-node"><div class="path-orb">2</div></div>
-        <div class="path-card">
-          <div class="bar"></div>
-          <div class="ptag">Alavanca 02</div>
-          <div class="head"><h3>Pacotes de ticket maior</h3></div>
-          <p>Campanhas estratégicas para viagens nacionais e internacionais validadas, construindo confiança antes da decisão de compra mais longa.</p>
-        </div>
-      </div>
-
-      <div class="path-step reveal" style="--c:#15803d">
-        <div class="path-node"><div class="path-orb">3</div></div>
-        <div class="path-card">
-          <div class="bar"></div>
-          <div class="ptag">Alavanca 03</div>
-          <div class="head"><h3>Faturamento recorrente por temporada</h3></div>
-          <p>Antecipar Réveillon, Carnaval e alta temporada de julho, reativando quem já viajou com sua agência de viagem.</p>
-        </div>
-      </div>
-
-      <div class="path-step fin reveal" style="--c:#eab308">
-        <div class="path-node"><div class="path-orb">🏆</div></div>
-        <div class="path-card">
-          <div class="bar"></div>
-          <div class="ptag">Resultado</div>
-          <div class="head"><h3>Mais faturamento, nacional e internacional</h3></div>
-          <p>Leads qualificados entrando toda semana, com clareza de quanto custa cada cliente que fecha pacote.</p>
-        </div>
-      </div>
+    <div class="prose center reveal">
+      <p>Você sabe que existem pessoas planejando férias, lua de mel, viagens em família, cruzeiros e viagens internacionais todos os dias.</p>
+      <p>O problema não é falta de gente querendo viajar.</p>
+      <p>O problema é que, quando essas pessoas começam a procurar, muitas vezes encontram outras agências antes da sua.</p>
+      <p>E enquanto sua empresa não aparece no momento certo, você continua dependendo de:</p>
+      <ul>
+        <li>Indicações de antigos clientes;</li>
+        <li>Postagens no Instagram que nem sempre geram vendas;</li>
+        <li>Promoções para movimentar períodos mais fracos;</li>
+        <li>Clientes que pedem orçamento e desaparecem;</li>
+        <li>Meses bons seguidos de meses com poucas oportunidades.</li>
+      </ul>
+      <p>Existe uma forma mais estratégica de gerar demanda para sua agência.</p>
     </div>
+  </div>
+</section>
 
-    <p class="bridge-label reveal">Na prática, ativamos essas alavancas através de:</p>
-
-    <!-- EDITE (opcional): os 3 serviços abaixo -->
-    <div class="cards-grid">
-      <div class="card reveal">
-        <div class="icon"><svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
-        <h3>Campanhas no Google Ads</h3>
-        <p>Sua agência de viagem aparece para quem já está pesquisando "pacote para X" ou "lua de mel em Y", demanda quente e pronta para fechar.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#E4405F" d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></div>
-        <h3>Anúncios de destino no Instagram e Facebook</h3>
-        <p>Criativos que despertam desejo por destinos nacionais e internacionais, atraindo o público certo para cada tipo de pacote.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
-        <h3>Funil de qualificação até o WhatsApp</h3>
-        <p>Antes de cair no seu WhatsApp, o lead passa por perguntas que filtram quem tem orçamento e intenção real de viajar.</p>
-      </div>
+<!-- ===== O MOMENTO DA BUSCA ===== -->
+<section id="busca">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="section-tag">O momento certo</span>
+      <h2>Imagine sua agência sendo encontrada justamente por quem está planejando viajar</h2>
+    </div>
+    <p class="reveal" style="text-align:center; color:var(--text-soft); font-size:15.5px; margin-bottom:24px;">Quando alguém pesquisa:</p>
+    <div class="chip-row reveal">
+      <span class="search-chip">"pacote para Europa"</span>
+      <span class="search-chip">"viagem para Orlando"</span>
+      <span class="search-chip">"pacote de lua de mel"</span>
+      <span class="search-chip">"agência de viagens perto de mim"</span>
+      <span class="search-chip">"pacote para o Nordeste"</span>
+    </div>
+    <div class="prose center reveal" style="margin-top:32px;">
+      <p>essas pessoas já estão demonstrando uma intenção.</p>
+      <p>É nesse momento que sua agência precisa aparecer.</p>
+      <p>Nós usamos estratégias de tráfego pago para aproximar sua agência de pessoas que já estão buscando aquilo que você vende.</p>
+      <p>Não se trata apenas de conseguir cliques.</p>
+      <p>Trata-se de criar novas oportunidades de venda.</p>
     </div>
   </div>
 </section>
@@ -1384,6 +1373,25 @@
   </div>
 </section>
 
+<!-- ===== BENEFÍCIOS ===== -->
+<section id="beneficios" class="section-light">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="section-tag">O que você ganha</span>
+      <h2>Mais pessoas certas chegando até sua agência</h2>
+      <p class="section-sub" style="margin:0 auto;">Nossa estratégia é construída para ajudar sua agência de viagens a:</p>
+    </div>
+    <ul class="check-list reveal" style="max-width:520px; margin:0 auto;">
+      <li><span class="check">✓</span>Ser encontrada por pessoas interessadas em viajar</li>
+      <li><span class="check">✓</span>Gerar novas solicitações de orçamento</li>
+      <li><span class="check">✓</span>Diminuir a dependência exclusiva de indicações</li>
+      <li><span class="check">✓</span>Divulgar destinos e pacotes estratégicos</li>
+      <li><span class="check">✓</span>Aumentar a presença da agência no Google</li>
+      <li><span class="check">✓</span>Criar um fluxo mais consistente de potenciais clientes</li>
+    </ul>
+  </div>
+</section>
+
 <!-- ===== ABOUT / ESPECIALISTA ===== -->
 <section class="about" id="especialista">
   <div class="container">
@@ -1412,104 +1420,18 @@
   </div>
 </section>
 
-<!-- ===== BOOKING ===== -->
-<section class="booking" id="agendar">
+<!-- ===== COMO TRABALHAMOS ===== -->
+<section id="expertise" class="section-light">
   <div class="container">
-    <div class="booking-wrap">
-      <div class="booking-info reveal">
-        <span class="section-tag">Análise Gratuita</span>
-        <h2>Sessão estratégica gratuita de 30 minutos</h2>
-        <p class="section-sub">Preencha o formulário e escolha o melhor horário. Vou analisar seu cenário antes da reunião para chegarmos direto ao ponto.</p>
-        <ul class="check-list">
-          <li><span class="check">✓</span>Diagnóstico do seu marketing atual e dos seus anúncios</li>
-          <li><span class="check">✓</span>Análise dos seus concorrentes que já anunciam</li>
-          <li><span class="check">✓</span>Plano de ação claro, mesmo que não fechemos negócio</li>
-          <li><span class="check">✓</span>Projeção de investimento e retorno esperado</li>
-        </ul>
-        <div class="note-timer">
-          <span>Análise com vagas limitadas</span>
-          <span class="value" id="booking-timer">20:00</span>
-        </div>
-      </div>
-
-      <div class="form-card reveal">
-        <form id="lead-form">
-          <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-            <img src="mariana-foto.jpg" alt="Mariana Rocha" style="width:52px;height:52px;min-width:52px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-glow);display:block;">
-            <div>
-              <h3 style="margin-bottom:2px;">Garanta sua vaga</h3>
-              <p class="form-sub" style="margin-bottom:0;">Diagnóstico gratuito · Resposta em até 24h úteis</p>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-          </div>
-
-          <div class="field">
-            <label for="whatsapp">WhatsApp</label>
-            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" required>
-          </div>
-
-          <div class="field">
-            <label for="agencia">Nome da agência de viagem</label>
-            <input type="text" id="agencia" name="agencia" placeholder="Sua agência de viagem" required>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="tipo_pacote">A agência de viagem vende principalmente</label>
-              <select id="tipo_pacote" name="tipo_pacote" required>
-                <option value="" disabled selected>Selecione</option>
-                <option>Pacotes nacionais</option>
-                <option>Pacotes internacionais</option>
-                <option>Ambos</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="faturamento">Faturamento mensal médio</label>
-              <select id="faturamento" name="faturamento" required>
-                <option value="" disabled selected>Selecione</option>
-                <option>Até R$ 10 mil</option>
-                <option>R$ 10 mil a R$ 30 mil</option>
-                <option>R$ 30 mil a R$ 80 mil</option>
-                <option>Acima de R$ 80 mil</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label for="investimento">Já investe em tráfego pago?</label>
-              <select id="investimento" name="investimento" required>
-                <option value="" disabled selected>Selecione</option>
-                <option>Sim, atualmente</option>
-                <option>Já investi, mas parei</option>
-                <option>Não, nunca investi</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="horario">Melhor horário para contato</label>
-              <select id="horario" name="horario" required>
-                <option value="" disabled selected>Selecione</option>
-                <option>Manhã (9h às 12h)</option>
-                <option>Tarde (13h às 18h)</option>
-                <option>Noite (18h às 21h)</option>
-              </select>
-            </div>
-          </div>
-
-          <button type="submit" class="submit-btn">Quero minha Análise Gratuita →</button>
-          <p class="form-privacy">🔒 Seus dados estão seguros. Sem spam, prometido.</p>
-        </form>
-
-        <div class="success-msg" id="success">
-          <div class="big-check">✓</div>
-          <h3>Recebemos seus dados!</h3>
-          <p>Em breve nossa equipe entra em contato pelo WhatsApp para agendar sua Análise Gratuita. Fique de olho no seu WhatsApp.</p>
-        </div>
-      </div>
+    <div class="section-head center reveal">
+      <span class="section-tag">Como trabalhamos</span>
+      <h2>Você entende de viagens. Nós entendemos como fazer sua agência ser encontrada.</h2>
+    </div>
+    <div class="prose center reveal">
+      <p>Enquanto você cuida dos roteiros, fornecedores, reservas e da experiência dos seus passageiros, nós cuidamos da estratégia para colocar sua empresa diante de novos potenciais clientes.</p>
+      <p>Analisamos o que seus clientes estão procurando, estruturamos as campanhas e direcionamos os anúncios para pessoas com maior intenção de compra.</p>
+      <p>Sua agência continua fazendo o que sabe fazer melhor: vender experiências.</p>
+      <p>Nós trabalhamos para trazer mais oportunidades até ela.</p>
     </div>
   </div>
 </section>
@@ -1546,10 +1468,14 @@
 <!-- ===== FINAL CTA ===== -->
 <section class="final-cta" id="final-cta">
   <div class="container reveal">
-    <h2>Pronto para ter novos clientes chegando no seu WhatsApp todos os dias?</h2>
-    <p class="section-sub">Clique no botão abaixo para agendar nossa conversa.</p>
+    <h2>O seu próximo cliente pode estar pesquisando uma viagem agora.</h2>
+    <div class="prose center" style="margin:0 auto 28px;">
+      <p>A questão é: quando ele pesquisar, vai encontrar a sua agência ou a concorrência?</p>
+      <p>Se você quer aumentar a presença da sua agência e criar novas oportunidades de vendas através do Google e das redes sociais, fale conosco.</p>
+      <p>Vamos analisar o cenário da sua agência e mostrar como podemos construir uma estratégia de aquisição de clientes para o seu negócio.</p>
+    </div>
     <div>
-      <a href="#agendar" class="btn-primary">Agendar minha sessão gratuita →</a>
+      <a href="https://wa.me/5531975387498?text=Ol%C3%A1!%20Quero%20vender%20mais%20viagens%20com%20tr%C3%A1fego%20pago." class="btn-primary" target="_blank" rel="noopener">QUERO VENDER MAIS VIAGENS →</a>
     </div>
   </div>
 </section>
@@ -1569,7 +1495,7 @@
 <script>
   /* Config editável — o número de WhatsApp é injetado pelo editor. */
   const CONFIG = {
-    whatsapp: '5500000000000'
+    whatsapp: '5531975387498'
   };
 
   // Scroll reveal
@@ -1583,16 +1509,6 @@
   }, { threshold: 0.12 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Máscara simples de WhatsApp
-  const tel = document.getElementById('whatsapp');
-  tel.addEventListener('input', () => {
-    let v = tel.value.replace(/\D/g, '').slice(0, 11);
-    if (v.length > 6) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
-    else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
-    else if (v.length > 0) v = `(${v}`;
-    tel.value = v;
-  });
 
   // Cronômetro de urgência: conta 20 minutos e reinicia em loop silenciosamente.
   const URGENCY_SECONDS = 20 * 60;
@@ -1611,32 +1527,6 @@
 
   tickUrgency();
   setInterval(tickUrgency, 1000);
-
-  // Envio do formulário: abre o WhatsApp com os dados do lead
-  document.getElementById('lead-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target));
-
-    const msg = [
-      'Olá! Quero minha Análise Gratuita de Tráfego.',
-      '',
-      `*Nome:* ${data.nome}`,
-      `*WhatsApp:* ${data.whatsapp}`,
-      `*Agência:* ${data.agencia}`,
-      `*Tipo de pacote:* ${data.tipo_pacote}`,
-      `*Faturamento mensal médio:* ${data.faturamento}`,
-      `*Já investe em tráfego pago:* ${data.investimento}`,
-      `*Melhor horário para contato:* ${data.horario}`
-    ].join('\n');
-
-    // Abre o WhatsApp do dono do site com a mensagem pronta
-    if (CONFIG.whatsapp && CONFIG.whatsapp !== '5500000000000') {
-      window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
-    }
-
-    document.getElementById('lead-form').style.display = 'none';
-    document.getElementById('success').style.display = 'block';
-  });
 </script>
 
 </body>
