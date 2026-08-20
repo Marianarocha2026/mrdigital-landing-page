@@ -311,6 +311,28 @@
   .prose ul { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; margin: 20px 0; color: var(--muted-foreground); font-size: 16px; }
   .prose ul li::marker { color: var(--ocean); }
 
+  /* ===== GRID DE PONTOS DE DOR ===== */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 720px;
+    margin: 24px auto 0;
+  }
+  .pain-item {
+    background: var(--muted);
+    color: var(--foreground);
+    border-left: 3px solid var(--sunset);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  @media (max-width: 640px) {
+    .pain-grid { grid-template-columns: 1fr; }
+  }
+
   /* ===== CHIPS (exemplos de busca) ===== */
   .chip-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
   .search-chip {
@@ -662,13 +684,15 @@
       <p>O problema não é falta de gente querendo viajar.</p>
       <p>O problema é que, quando essas pessoas começam a procurar, muitas vezes encontram outras agências antes da sua.</p>
       <p>E enquanto sua empresa não aparece no momento certo, você continua dependendo de:</p>
-      <ul>
-        <li>Indicações de antigos clientes;</li>
-        <li>Postagens no Instagram que nem sempre geram vendas;</li>
-        <li>Promoções para movimentar períodos mais fracos;</li>
-        <li>Clientes que pedem orçamento e desaparecem;</li>
-        <li>Meses bons seguidos de meses com poucas oportunidades.</li>
-      </ul>
+    </div>
+    <div class="pain-grid reveal">
+      <div class="pain-item">Indicações de antigos clientes</div>
+      <div class="pain-item">Postagens no Instagram que nem sempre geram vendas</div>
+      <div class="pain-item">Promoções para movimentar períodos mais fracos</div>
+      <div class="pain-item">Clientes que pedem orçamento e desaparecem</div>
+      <div class="pain-item">Meses bons seguidos de meses com poucas oportunidades</div>
+    </div>
+    <div class="prose center reveal" style="margin-top:28px;">
       <p>Existe uma forma mais estratégica de gerar demanda para sua agência.</p>
     </div>
   </div>
